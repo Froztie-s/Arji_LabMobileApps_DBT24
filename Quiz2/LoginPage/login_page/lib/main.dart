@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage());
@@ -12,6 +14,8 @@ class MyApp extends StatelessWidget {
 }
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -60,11 +64,11 @@ class _LoginPageState extends State<LoginPage> {
                 print('Username: ${usernameController.text}');
                 print('Password: ${passwordController.text}');
               },
-              child: Text('Login'),
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(double.infinity, 50),
                 backgroundColor: const Color.fromARGB(144, 35, 114, 250),
-              ),  
+              ),
+              child: Text('Login'),  
             ),
           ],
         ),

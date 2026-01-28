@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Fix Git and Push",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"taskkill /F /IM git.exe; git reset --merge; git pull origin main --allow-unrelated-histories --no-edit; git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Fix Git and Push PS",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-Command",
+				"Stop-Process -Name git -Force -ErrorAction SilentlyContinue; git reset --merge; git pull origin main --allow-unrelated-histories --no-edit; git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Check Git Status",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-Command",
+				"git status; git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

@@ -36,6 +36,54 @@
 			"isBackground": false,
 			"problemMatcher": [],
 			"group": "build"
+		},
+		{
+			"label": "Sync Repo",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-Command",
+				"git commit -m \"Sync local changes\"; git pull origin main; git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Sync Repo Retry",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-Command",
+				"git commit -m 'Sync local changes'; git pull origin main; git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Sync Repo No Spaces",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-Command",
+				"git commit -m \"Sync_local_changes\"; git pull origin main; git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Final Push",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-Command",
+				"git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
 		}
 	]
 }
